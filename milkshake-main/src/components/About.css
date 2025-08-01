@@ -1,0 +1,24 @@
+.about {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.about-content img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+}
