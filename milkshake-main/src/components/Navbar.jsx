@@ -1,17 +1,29 @@
 import React from 'react';
 import './Navbar.css';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
-function Navbar() {
+const Navbar=()=> {
   return (
-    <nav className="navbar">
-      <h1>Milk Hsake Shop</h1>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#flavours">Flavours</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+   <div className="navbar">
+<div>
+  <h3 className="logo">ChillDV</h3>
+
+</div>
+
+<div className="nav-items">
+
+
+  <p >MilkShakes</p>
+  <p >About</p>
+  <p >Contact</p>
+  <p >Milk Shop</p>
+  
+  
+</div>
+<div className="icon">
+  <GiHamburgerMenu size={24}/>
+</div>
+   </div>
   );
 }
 
