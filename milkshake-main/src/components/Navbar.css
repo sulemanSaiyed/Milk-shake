@@ -1,19 +1,31 @@
 .navbar h3 {
-
+font-family: "Roedies", sans-serif;
+font-size: 40px;
+color: #d7b89c;
 }
 
 .navbar p {
- 
+ font-family: "Arial",sans-serif;
+ font-size: 18px;
+ color: #d7b89c;
+
 }
 
 .icon {
- 
+ color: #d7b89c;
 }
 
 .navbar {
-
+position: absolute;
+top: 10px;
+display: flex;
+justify-content: center;
+gap: 240px;
+align-items: center;
+padding: 0px 80px;
 }
 
 .nav-items{
-  
+display: flex;
+gap: 60px;
 }
