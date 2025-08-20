@@ -9,7 +9,8 @@ const Hero=()=> {
   <Navbar/>
   <h2>CHOCOLATESHAKE</h2>
 
-
+<img src="./images/1.png" alt="Milk shake" className='milk'/>
+<img src="./images/coffee.png" alt="Coffee" className="cof" />
   <div className="hero-text">
   <h3>Creamy ChoclateShake</h3>
   <p>
@@ -17,8 +18,63 @@ const Hero=()=> {
     a dreamy blend of sweetness and cocoa delight.
   </p>
   </div>
+ <img src="./images/chat.png" alt="Chat" className="chat" />
+   <img  src="./images/chat.png" alt="Chat" className="chat1" />
+    <img  src="./images/chat.png" alt="Chat" className="chat2" />
+</div>
+
+<div className="section1">
+
+  <div className="section1-img">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#D7B89C"
+              d="M48.1,-69.6C58.4,-58.8,60,-39.4,63.8,-22.1C67.5,-4.7,73.5,10.5,71,24.6C68.6,38.7,57.7,51.6,44.5,58.8C31.3,65.9,15.6,67.2,-0.5,68C-16.7,68.7,-33.4,68.8,-45.6,61.3C-57.7,53.9,-65.4,38.8,-72.3,22.4C-79.2,5.9,-85.4,-11.9,-80,-25.2C-74.5,-38.4,-57.5,-47,-42.2,-56.3C-27,-65.5,-13.5,-75.3,2.7,-79.1C18.9,-82.8,37.8,-80.5,48.1,-69.6Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+
+  </div>
+
+  <div className="section1-text">
+
+    <h3>Pure Chocolate Bliss</h3>
+    <p> Dive into the decadence of our handcrafted chocolate Milk Shakes —
+            smooth, rich, and made to melt hearts with every sip. Each sip is
+            a celebration of cocoa, churned to perfection for an irresistibly
+            creamy texture. Made with the finest ingredients, it’s a comforting
+            treat that brings warmth and joy with every taste. Whether you're
+            savoring it solo or sharing with someone special, this chocolate
+            delight promises a moment of pure happiness.
+            </p>
+  </div>
+</div>
+
+<div className="section2 flex">
+<div className="curve1">
+
+  <img src="./images/section2.png" alt="Strawberry" className="straw" />
+          <img src="./images/three.png" alt="Decoration" className="three" />
+<h3 className="sweet">Sweet Strawberry Shake</h3>
 
 </div>
+
+<div className="curve3">
+  <img src="./images/c1.png" alt="Chocolate" className="c1" />
+          <h3 className="sweet">Creamy Chocolate Shake</h3>
+</div>
+
+
+<div className="curve3">
+<img src="./images/pista-bg.png" alt="Pistachio" className="wtf" />
+          <img src="./images/two.png" alt="Decoration" className="two" />
+          <h3 className="sweet">Nutty Pistachio Shake</h3>
+
+
+</div>
+</div>
+
+
 </>
   );
 }
