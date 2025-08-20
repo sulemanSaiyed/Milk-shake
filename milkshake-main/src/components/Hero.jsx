@@ -1,15 +1,25 @@
 import React from 'react';
-//import './Hero.css';
+import './Hero.css';
+import Navbar from "./Navbar";
 
-function Hero() {
+const Hero=()=> {
   return (
-    <section className="hero" id="hero">
-      <div className="hero-content">
-        <h2>Welcome to Our MilkShake Shopssss</h2>
-        <p>Delicious flavours made with love 🥤</p>
-        <button>Order Now</button>
-      </div>
-    </section>
+<>
+<div className="hero">
+  <Navbar/>
+  <h2>CHOCOLATESHAKE</h2>
+
+
+  <div className="hero-text">
+  <h3>Creamy ChoclateShake</h3>
+  <p>
+    Induluge in the rich, valvety texture of our creamy choclate shake
+    a dreamy blend of sweetness and cocoa delight.
+  </p>
+  </div>
+
+</div>
+</>
   );
 }
 
