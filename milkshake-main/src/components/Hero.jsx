@@ -59,7 +59,7 @@ const Hero=()=> {
 
 </div>
 
-<div className="curve3">
+<div className="curve2">
   <img src="./images/c1.png" alt="Chocolate" className="c1" />
           <h3 className="sweet">Creamy Chocolate Shake</h3>
 </div>

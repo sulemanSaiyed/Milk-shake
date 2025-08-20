@@ -39,3 +39,10 @@ width: 300px;
 right: 400px;
 color:  #f0dbcb;
 }
+
+.cof{
+  position: absolute;
+    bottom: 90px;
+    width: 800px;
+    height: 800px;
+}
