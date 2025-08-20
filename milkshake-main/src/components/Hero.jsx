@@ -16,6 +16,34 @@ const Hero=()=> {
 
 
   useEffect(() => {
+    const heading = section1HeadingRef.current;
+    const paragraph = section1ParaRef.current;
+
+    gsap.set([heading, paragraph], { opacity: 0, x: 100 });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    tl.to(heading, {
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+    }).to(paragraph, {
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+    }, "+=0.2");
+  }, []);
+
+
+  useEffect(() => {
     const h2 = document.querySelector(".hero h2");
     const ice = iceRef.current;
     const heroTextH3 = document.querySelector(".hero-text h3");
@@ -97,7 +125,7 @@ const Hero=()=> {
         ease: "power1.out",
       });
   }, []);
-  
+
   return (
 <>
 <div className="hero">
