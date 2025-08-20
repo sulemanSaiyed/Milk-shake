@@ -1,6 +1,8 @@
 import React,{useEffect,useRef} from 'react';
 import './Hero.css';
 import Navbar from "./Navbar";
+import gsap from "gsap";
+//import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Hero=()=> {
 
@@ -49,6 +51,51 @@ const Hero=()=> {
         duration: 0.8,
         ease: "power3.out",
       }, "-=0.3");
+  }, []);
+  
+
+  useEffect(() => {
+    const ice = iceRef.current;
+    const chat = chatRef.current;
+    const chat1 = chat1Ref.current;
+    const chat2 = chat2Ref.current;
+    const section2 = document.querySelector(".section2");
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        endTrigger: section2,
+        end: "top+=100 top",
+        scrub: true,
+      },
+    });
+
+    tl.to(ice, {
+      x: -400,
+      y: 830,
+      ease: "power1.out",
+    }, 0)
+      .to(chat, {
+        x: 40,
+        y: 680,
+        ease: "power1.out",
+      }, 0)
+      .to(chat1, {
+        x: -1000,
+        y: 850,
+        ease: "power1.out",
+      }, 0)
+      .to(chat2, {
+        x: -780,
+        y: 1150,
+        ease: "power1.out",
+      }, 0)
+      .to(ice, {
+        x: -10,
+        y: 1600,
+        ease: "power1.out",
+      });
   }, []);
   
   return (
