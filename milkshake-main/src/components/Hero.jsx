@@ -1,8 +1,20 @@
-import React from 'react';
+import React,{useEffect,useRef} from 'react';
 import './Hero.css';
 import Navbar from "./Navbar";
 
 const Hero=()=> {
+
+  const iceRef = useRef(null);
+  const chatRef = useRef(null);
+  const chat1Ref = useRef(null);
+  const chat2Ref = useRef(null);
+  const sectionRef = useRef(null);
+  const section1HeadingRef = useRef(null);
+  const section1ParaRef = useRef(null);
+
+
+
+  
   return (
 <>
 <div className="hero">
