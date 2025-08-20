@@ -13,7 +13,43 @@ const Hero=()=> {
   const section1ParaRef = useRef(null);
 
 
+  useEffect(() => {
+    const h2 = document.querySelector(".hero h2");
+    const ice = iceRef.current;
+    const heroTextH3 = document.querySelector(".hero-text h3");
+    const heroTextP = document.querySelector(".hero-text p");
 
+    gsap.set([h2, ice, heroTextH3, heroTextP], { opacity: 0 });
+    gsap.set(h2, { x: 200 });
+    gsap.set(ice, { y: 200 });
+    gsap.set([heroTextH3, heroTextP], { y: 50 });
+
+    const tl = gsap.timeline();
+
+    tl.to(h2, {
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+    }).to(ice, {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+    }, "-=0.5")
+      .to(heroTextH3, {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power3.out",
+      }, "+=0.2")
+      .to(heroTextP, {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power3.out",
+      }, "-=0.3");
+  }, []);
   
   return (
 <>
