@@ -46,3 +46,66 @@ color:  #f0dbcb;
     width: 800px;
     height: 800px;
 }
+
+.chat{
+position: relative;
+left: 100px;
+width: 200px;
+height: 200px;
+z-index: 100;
+}
+.chat1{
+    position: absolute;
+   right: 100px;
+   bottom: 100px;
+    width: 200px;
+    height: 200px;
+    z-index: 100;
+}
+.chat2{
+    position: absolute;
+   right: 100px;
+   top: 100px;
+    width: 200px;
+    height: 200px;
+    z-index: 100;
+}
+
+
+  .section1{
+        background: linear-gradient(to bottom, #4b2e1f, #2f1a12); 
+ position: relative;
+    color: #f0e0d6;
+    width: 100vw;
+    height: 800px;
+  }
+
+    .section1-img {
+    position: relative;
+   top: 250px;
+   left: 100px;
+   width: 500px;
+   height: 100px;
+
+  }
+   .section1-text {
+    position: absolute;
+    max-width: 500px;
+    color: #f5e2d5;
+    right: 100px;
+    top: 150px;
+  }
+  
+  .section1-text h3 {
+    font-size: 40px;
+    font-family: "Rowdies", sans-serif;
+    color: #f3d6c3;
+    margin-bottom: 20px;
+  }
+  
+  .section1-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: 'Arial', sans-serif;
+    color: #f0dbcb;
+  }
