@@ -53,21 +53,21 @@ const Hero=()=> {
 <div className="section2 flex">
 <div className="curve1">
 
-  <img src="./images/section2.png" alt="Strawberry" className="straw" />
-          <img src="./images/three.png" alt="Decoration" className="three" />
+  <img src="./images/section2.png" alt="Strawberry" className="berry" />
+          <img src="./images/three.png" alt="Decoration" className="m3" />
 <h3 className="sweet">Sweet Strawberry Shake</h3>
 
 </div>
 
 <div className="curve2">
-  <img src="./images/c1.png" alt="Chocolate" className="c1" />
+  <img src="./images/c1.png" alt="Chocolate" className="cho" />
           <h3 className="sweet">Creamy Chocolate Shake</h3>
 </div>
 
 
 <div className="curve3">
-<img src="./images/pista-bg.png" alt="Pistachio" className="wtf" />
-          <img src="./images/two.png" alt="Decoration" className="two" />
+<img src="./images/pista-bg.png" alt="Pistachio" className="pista" />
+          <img src="./images/two.png" alt="Decoration" className="pista2" />
           <h3 className="sweet">Nutty Pistachio Shake</h3>
 
 
