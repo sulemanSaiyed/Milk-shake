@@ -6,7 +6,7 @@ const Navbar=()=> {
   return (
    <div className="navbar">
 <div>
-  <h3 className="logo">ChillDV</h3>
+  <h3 className="logo">Denzil-Shakes</h3>
 
 </div>
 

@@ -2,8 +2,9 @@ import React,{useEffect,useRef} from 'react';
 import './Hero.css';
 import Navbar from "./Navbar";
 import gsap from "gsap";
-//import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 const Hero=()=> {
 
   const iceRef = useRef(null);
@@ -14,6 +15,42 @@ const Hero=()=> {
   const section1HeadingRef = useRef(null);
   const section1ParaRef = useRef(null);
 
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".m3",
+      { rotate: -180 },
+      {
+        rotate: -270,
+        duration: 1.8,
+        ease: "power2.out",
+        transformOrigin: "left bottom",
+        scrollTrigger: {
+          trigger: ".section2",
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
+          markers: false,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".two",
+      { rotate: -360 },
+      {
+        rotate: -270,
+        duration: 1.8,
+        ease: "power2.inOut",
+        transformOrigin: "right bottom",
+        scrollTrigger: {
+          trigger: ".section2",
+          start: "top 95%",
+          toggleActions: "play reverse play reverse",
+          markers: false,
+        },
+      }
+    );
+  }, []);
 
   useEffect(() => {
     const heading = section1HeadingRef.current;
@@ -45,7 +82,7 @@ const Hero=()=> {
 
   useEffect(() => {
     const h2 = document.querySelector(".hero h2");
-    const ice = iceRef.current;
+    const milk = iceRef.current;
     const heroTextH3 = document.querySelector(".hero-text h3");
     const heroTextP = document.querySelector(".hero-text p");
 
@@ -61,7 +98,7 @@ const Hero=()=> {
       opacity: 1,
       duration: 1,
       ease: "power3.out",
-    }).to(ice, {
+    }).to(milk, {
       y: 0,
       opacity: 1,
       duration: 1,
@@ -83,7 +120,7 @@ const Hero=()=> {
   
 
   useEffect(() => {
-    const ice = iceRef.current;
+    const milk = iceRef.current;
     const chat = chatRef.current;
     const chat1 = chat1Ref.current;
     const chat2 = chat2Ref.current;
@@ -99,7 +136,7 @@ const Hero=()=> {
       },
     });
 
-    tl.to(ice, {
+    tl.to(milk, {
       x: -400,
       y: 830,
       ease: "power1.out",
@@ -119,7 +156,7 @@ const Hero=()=> {
         y: 1150,
         ease: "power1.out",
       }, 0)
-      .to(ice, {
+      .to(milk, {
         x: -10,
         y: 1600,
         ease: "power1.out",
@@ -132,7 +169,7 @@ const Hero=()=> {
   <Navbar/>
   <h2>CHOCOLATESHAKE</h2>
 
-<img src="./images/1.png" alt="Milk shake" className='milk'/>
+<img ref={iceRef}src="./images/1.png" alt="Milk shake" className='milk'/>
 <img src="./images/coffee.png" alt="Coffee" className="cof" />
   <div className="hero-text">
   <h3>Creamy ChoclateShake</h3>
@@ -141,12 +178,12 @@ const Hero=()=> {
     a dreamy blend of sweetness and cocoa delight.
   </p>
   </div>
- <img src="./images/chat.png" alt="Chat" className="chat" />
-   <img  src="./images/chat.png" alt="Chat" className="chat1" />
-    <img  src="./images/chat.png" alt="Chat" className="chat2" />
+ <img ref={chatRef}src="./images/chat.png" alt="Chat" className="chat" />
+   <img ref={chat1Ref} src="./images/chat.png" alt="Chat" className="chat1" />
+    <img ref={chat2Ref} src="./images/chat.png" alt="Chat" className="chat2" />
 </div>
 
-<div className="section1">
+<div className="section1" ref={sectionRef}>
 
   <div className="section1-img">
   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -161,8 +198,8 @@ const Hero=()=> {
 
   <div className="section1-text">
 
-    <h3>Pure Chocolate Bliss</h3>
-    <p> Dive into the decadence of our handcrafted chocolate Milk Shakes —
+    <h3 ref={section1HeadingRef}>Pure Chocolate Bliss</h3>
+    <p ref={section1ParaRef}> Dive into the decadence of our handcrafted chocolate Milk Shakes —
             smooth, rich, and made to melt hearts with every sip. Each sip is
             a celebration of cocoa, churned to perfection for an irresistibly
             creamy texture. Made with the finest ingredients, it’s a comforting
@@ -189,8 +226,8 @@ const Hero=()=> {
 
 
 <div className="curve3">
-<img src="./images/pista-bg.png" alt="Pistachio" className="pista" />
-          <img src="./images/two.png" alt="Decoration" className="pista2" />
+<img src="./images/pista-bg.png" alt="Pistachio" className="wtf" />
+          <img src="./images/two.png" alt="Decoration" className="two" />
           <h3 className="sweet">Nutty Pistachio Shake</h3>
 
 
