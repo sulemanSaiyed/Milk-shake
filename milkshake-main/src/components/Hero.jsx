@@ -86,9 +86,9 @@ const Hero=()=> {
     const heroTextH3 = document.querySelector(".hero-text h3");
     const heroTextP = document.querySelector(".hero-text p");
 
-    gsap.set([h2, ice, heroTextH3, heroTextP], { opacity: 0 });
+    gsap.set([h2, milk, heroTextH3, heroTextP], { opacity: 0 });
     gsap.set(h2, { x: 200 });
-    gsap.set(ice, { y: 200 });
+    gsap.set(milk, { y: 200 });
     gsap.set([heroTextH3, heroTextP], { y: 50 });
 
     const tl = gsap.timeline();
